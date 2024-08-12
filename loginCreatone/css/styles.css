@@ -1,0 +1,222 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/images/background.png);
+    background-size:cover;
+    background-position: center; /* Centra la imagen en el fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-attachment: fixed; /* Fija el fondo al viewport */
+    color: white;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    z-index: 0;
+}
+
+.center-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%; /* Ajusta según sea necesario */
+    z-index: 1;
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.logo-center img {
+    width: 70%;
+    max-width: 700px;
+}
+
+.login-button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 60px;
+    z-index: 2;
+}
+
+.login-button button {
+    padding: 15px 30px;
+    background-color: rgba(114, 0, 0, 1);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.login-button button:hover {
+    background-color: #5a0000;
+}
+
+.logo-bottom-left {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 2;
+}
+
+.logo-bottom-left img {
+    width: 70%;
+    max-width: 300px;
+}
+
+/* Estilos del Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 3;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #1e1e1e;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 10px;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-title {
+    color: rgba(84, 84, 84, 0.6);
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.modal-content label {
+    display: block;
+    text-align: left;
+    margin: 10px 0 5px;
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 60px;
+    box-sizing: border-box;
+}
+
+.modal-content button {
+    padding: 10px 20px;
+    background-color: #3D9FFA;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.modal-content button:hover {
+    background-color: #357ab7;
+}
+
+.modal-links {
+    margin-top: 20px;
+}
+
+.modal-links a {
+    color: #3D9FFA;
+    text-decoration: none;
+    display: block;
+    margin-top: 10px;
+}
+
+.modal-links a:hover {
+    text-decoration: underline;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    .logo-center img {
+        width: 90%;
+        max-width: 600px;
+    }
+
+    .login-button button {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    .logo-bottom-left img {
+        width: 90%;
+        max-width: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-center img {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .login-button button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .logo-bottom-left img {
+        width: 100%;
+        max-width: 200px;
+    }
+}
